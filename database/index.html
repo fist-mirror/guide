@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from palm.fist.moe/database/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Jul 2022 21:26:57 GMT -->
+<head>
+<meta http-equiv="Content-Type", content="text/html; charset=utf-8", />
+<meta name="Description", content="English information for Monster Hunter Frongems G TW", />
+<meta name="Keywords", content="monster hunter frongems, english, monster hunter frongems g, taiwan, mhfg tw, mhfg, english guild, frongems Z, mhfz, monster hunter frongems z", />
+<title>MHF-Z : Database</title>
+<link id="sizecss", href="main.min.css", rel="stylesheet", type="text/css">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<!-- jquery stuff -->
+<link rel="stylesheet", href="../../ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/smoothness/jquery-ui.css", />
+<script src="../../ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="../../ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" , type="text/css" , href="../../yui.yahooapis.com/3.18.1/build/cssreset-context/cssreset-context-min.html">
+<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<script src="../scripts/fuse.js"></script>
+<script src="../scripts/jquery.js"></script>
+<script src="../scripts/database.js"></script>
+<script>
+/* asynchronous */
+$.ajaxPrefilter(function( options, original_Options, jqXHR ) {
+    options.async = true;
+});
+</script>
+
+
+</head>
+<body>
+<style>
+#canvas{ 
+pointer-events:none; 
+position: fixed;
+top:0px;
+left:0px;
+width:100%;
+height:100%;
+z-index:9999;
+}
+
+.sectionFooter{
+  transition: opacity 0.4s;
+
+}
+#sect-desc{
+  transition: opacity 0.4s;
+  margin-top: -18px;
+}
+</style>
+<canvas id="canvas"></canvas>
+<!-- rain
+<script>
+$(document).ready(function() {
+  var canvas = $('#canvas')[0];
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  
+  if(canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+    var w = canvas.width;
+    var h = canvas.height;
+    ctx.strokeStyle = 'rgba(0,0,0,0.125)';
+    ctx.lineWidth = 1;
+    ctx.lineCap = 'round';
+    
+    
+    var init = [];
+    var maxParts = 200;
+    for(var a = 0; a < maxParts; a++) {
+      init.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        l: Math.random() * 1,
+        xs: -4 + Math.random() * 4 + 2,
+        ys: Math.random() * 40 + 80
+      })
+    }
+    
+    var particles = [];
+    for(var b = 0; b < maxParts; b++) {
+      particles[b] = init[b];
+    }
+    
+    function draw() {
+      ctx.clearRect(0, 0, w, h);
+      for(var c = 0; c < particles.length; c++) {
+        var p = particles[c];
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(p.x + p.l * p.xs, p.y + p.l * p.ys);
+        ctx.stroke();
+      }
+      move();
+    }
+    
+    function move() {
+      for(var b = 0; b < particles.length; b++) {
+        var p = particles[b];
+        p.x += p.xs;
+        p.y += p.ys;
+        if(p.x > w || p.y > h) {
+          p.x = Math.random() * w;
+          p.y = -20;
+        }
+      }
+    }
+    
+    setInterval(draw, 30);
+    
+  }
+});
+</script>
+-->
+
+<div id="overlay">
+Loading...
+<div id="preloads">
+<img src="../img/mons/zenithespinas.png"><img src="../img/mons/zenithkhezu.png"><img src="../img/mons/zenithdaimyo.png"><img src="../img/mons/zenithhypnoc.png"><img src="../img/mons/zenithrathalos.png"><img src="../img/mons/zenithblangonga.png"><img src="../img/mons/zenithakuravashimu.png"><img src="../img/mons/zenithtigrex.png"><img src="../img/mons/shagarumagala.png"><img src="../img/mons/zenithhyujikiki.png"><img src="../img/mons/zenithgiaorugu.png"><img src="../img/mons/elzelion.png"><img src="../img/mons/zenithmidogaron.png"><img src="../img/mons/zenithrukodiora.png"><img src="../img/mons/zenithplesioth.png"><img src="../img/mons/amatsu.png"><img src="../img/mons/zenithinagami.png"><img src="../img/mons/zenithtoridcless.png"><img src="../img/mons/zenithdoragyurosu.png"><img src="../img/mons/seregios.png"><img src="../img/mons/zenithgasurabazura.png"><img src="../img/mons/zenithanorupatisu.png"><img src="img/sands_icon.png"><img src="img/ds_icon.png"><img src="img/gs_icon.png"><img src="img/ls_icon.png"><img src="img/hammer_icon.png"><img src="img/hh_icon.png"><img src="img/lance_icon.png"><img src="img/gunlance_icon.png" ><img src="img/tonfa_icon.png"><img src="img/slashaxe_icon.png"><img src="img/lbg_icon.png"><img src="img/hbg_icon.png"><img src="img/bow_icon.png"><img src="../img3/border2.png"><img src="img/magspike_icon.png"><img src="img/tower_icon.png"><img class="monsterIcon" src="../img/mons/zenithtaikunzamuza.png"><img class="monsterIcon" src="../img/mons/zenithharudomerugu.png">
+
+
+</div>
+</div>
+
+
+
+<div class="container" style="padding-bottom:0px;line-height:16px;">
+
+
+<p style="margin-bottom:0px;margin-top:4px;padding:0px;line-height:35px;" class="selectrow">
+<div class="sectionIcon" id="DBsection01" title="Item Names"></div>
+<div class="sectionIcon" id="DBsection02" title="Monster Names"></div>
+<div class="sectionIcon" id="DBsection03" title="Newer Carve Tables"></div>
+<div class="sectionIcon" id="DBsection14" title="Hitboxes"></div>
+<div class="sectionIcon" id="DBsection04" title="Location, Season &amp; Time Info"></div>
+<div class="sectionIcon" id="DBsection05" title="Skill Names &amp; Priority"></div>
+<div class="sectionIcon" id="DBsection06" title="Decorations Info"></div>
+<div class="sectionIcon" id="DBsection07" title="Armour Series"></div>
+<div class="sectionIcon" id="DBsection08" title="Weapon Tables"></div>
+<div class="sectionIcon" id="DBsection09" title="Sigil Recipes"></div>
+<div class="sectionIcon" id="DBsection10" title="Guild Cooking Recipes"></div>
+<div class="sectionIcon" id="DBsection11" title="Combination List"></div>
+<div class="sectionIcon" id="DBsection12" title="Hunter's Road"></div>
+<div class="sectionIcon" id="DBsection13" title="Misc Calcs"></div>
+<div class="sectionIcon" id="DBsection18" title="HH Songs"></div>
+<div class="sectionIcon" id="DBsection15" title="Partner Skills"></div>
+<div class="sectionIcon" id="DBsection19" title="Partnyaa Decos"></div>
+<div class="sectionIcon" id="DBsection16" title="Tower"></div>
+<div class="sectionIcon" id="DBsection17" title="MHSX2G Look Up"></div>
+<div class="sectionIcon" id="DBsection20" title="Raviente Weapons"></div>
+<div class="sectionIcon" id="DBsection21" title="UL Patch"></div>
+<div class="fakesectionIcon" id="HidenCalc" title="Hiden Calculator"></div>
+<div class="fakesectionIcon" id="DamageCalc" title="Damage Calculator"></div><br/>
+
+<div class="sectionFooter" style="margin-left:2px;">Items</div>
+<div class="sectionFooter">Mobs</div>
+<div class="sectionFooter">Mats</div>
+<div class="sectionFooter">Hitbox</div>
+<div class="sectionFooter">Names</div>
+<div class="sectionFooter">Skills</div>
+<div class="sectionFooter">Decos</div>
+<div class="sectionFooter">Armor</div>
+<div class="sectionFooter">Weapon</div>
+<div class="sectionFooter">Sigil</div>
+<div class="sectionFooter">GH.Food</div>
+<div class="sectionFooter">Combo</div>
+<div class="sectionFooter">Road</div>
+<div class="sectionFooter">Calcs</div>
+<div class="sectionFooter">Songs</div>
+<div class="sectionFooter">Partner</div>
+<div class="sectionFooter">Cats</div>
+<div class="sectionFooter">Tower</div>
+<div class="sectionFooter">MHSX2</div>
+<div class="sectionFooter">Ravi</div>
+<div class="sectionFooter">Patch</div>
+<div class="sectionFooter">Hiden</div>
+<div class="sectionFooter">Attack</div>
+
+<div id="sect-desc">&nbsp;</div>
+<br/>
+<img src="img/sep.png" alt="- - - - -" style="margin:0px;">
+</p>
+</div>
+
+
+<div>
+<div id="contentHolder">
+<div class="backer" style="margin-top:-8px;margin-left:auto;margin-right:auto;">Recent Changes &amp; Additions</div>
+
+<p style="margin:0px auto;width:700px;text-align:center;font-weight:bold;text-decoration:underline;">17th April 2019</p>
+<p style="margin:0px auto 5px auto;width:700px;">
+<b>Mats:</b> Zenith Harudomerugu materials added
+</p>
+
+<p style="margin:0px auto;width:700px;text-align:center;font-weight:bold;text-decoration:underline;">12th April 2019</p>
+<p style="margin:0px auto 5px auto;width:700px;">
+<b>Armours:</b> Fins, Dins, Favila, Lenigan, Firl, Finis, Kotona, Recolis, Anbu and Kinkou Gacha Series Added
+<b>Hitboxes:</b> Added hitboxes for all Zeniths and Musou Zeru. Defrates adjusted to reflect ZZamuza update.
+<b>Weapons:</b> All missing festival and event weapons. All released weapon materials.
+</p>
+
+<p style="margin:0px auto;width:700px;text-align:center;font-weight:bold;text-decoration:underline;">2nd March 2019</p>
+<p style="margin:0px auto 5px auto;width:700px;">
+New road weapons added. G100 magspikes added.
+</p>
+
+
+<p style="margin:0px auto;width:700px;text-align:center;font-weight:bold;text-decoration:underline;">4th Feb 2019</p>
+<p style="margin:0px auto 5px auto;width:700px;">
+<b>Hunting Horn Songs:</b> Added.<br/>
+Probably the last update in a while.
+</p>
+
+
+<p style="margin:0px auto;width:700px;text-align:center;font-weight:bold;text-decoration:underline;">3rd Feb 2019</p>
+<p style="margin:0px auto 5px auto;width:700px;">
+<b>Armours, MHSX2G Look Up, Decos, Mats, Items:</b> Z3.1 decos, cuffs and armour series.
+</p>
+
+
+<p style="margin:0px auto;width:700px;text-align:center;font-weight:bold;text-decoration:underline;">24th Jan 2019</p>
+<p style="margin:0px auto 5px auto;width:700px;">
+<b>Weapons:</b> Harudomerugu and Taikun weapons added.<br/>
+</p>
+<p style="margin:0px auto;width:700px;text-align:center;font-weight:bold;text-decoration:underline;">6th Dec 2018</p>
+<p style="margin:0px auto 5px auto;width:700px;">
+<b>Decos:</b> New TW decos for hidens, abnormality and determination added.<br/>
+</p>
+<p style="margin:0px auto;width:700px;text-align:center;font-weight:bold;text-decoration:underline;">3rd Dec 2018</p>
+<p style="margin:0px auto 5px auto;width:700px;">
+<b>Weapons:</b> Origin weapons for Sword and Shield and Dual Swords. Event weapons have links to their relevant events.<br/>
+</p>
+<p style="margin:0px auto;width:700px;text-align:center;font-weight:bold;text-decoration:underline;">29th November 2018</p>
+<p style="margin:0px auto 5px auto;width:700px;">
+<b>Armours:</b> Alicia Lotto, Alisys Lotto, PSO2 Lotto, Guridi Event, Gravios, Baruragaru.<br/>
+<b>Decos:</b> Future ZZ Musou, Future Festivals (Furious, Spacing, Trained), more TW lotto.<br/>
+<b>Weapons:</b> Gravios, Blue and Black Tower, Baruragaru, Event Varusa, Event Legendary, Chroma Festi<br/>
+<b>Materials:</b> Gravios, Baruragaru
+</p>
+
+
+
+</div>
+</div>
+
+<script src="scripts/db.js"></script>
+<script src="scripts/monsterMini.js"></script> 
+<script src="scripts/monsterMats.js"></script> 
+<script>		
+$('#DBsection01').mouseover(function(){
+	$('#sect-desc').text('Item Names and Ferias Links.');
+});
+$('#DBsection02').mouseover(function(){
+	$('#sect-desc').text('Monster Names and Ferias Links.');
+});
+$('#DBsection03').mouseover(function(){
+	$('#sect-desc').text('Carve tables for monsters launched MHF-Z onwards.');
+});
+$('#DBsection14').mouseover(function(){
+	$('#sect-desc').text('Hitbox values for all monsters. HP values for HR5 and GR monsters.');
+});
+$('#DBsection04').mouseover(function(){
+	$('#sect-desc').text('Names for locations, seasons, times, weapons, weapon properties, etc.');
+});
+$('#DBsection05').mouseover(function(){
+	$('#sect-desc').text('Armour skill names and priority table.');
+});
+$('#DBsection06').mouseover(function(){
+	$('#sect-desc').text('Search for decoration names and skill points.');
+});
+$('#DBsection07').mouseover(function(){
+	$('#sect-desc').text('Search for armour series names.');
+});
+$('#DBsection08').mouseover(function(){
+	$('#sect-desc').text('Weapon Stats for MHF-Z onwards.');
+});
+$('#DBsection09').mouseover(function(){
+	$('#sect-desc').text('Sigil Recipes and their roll ranged.');
+});
+$('#DBsection10').mouseover(function(){
+	$('#sect-desc').text('Guild Cooking Recipes and their resulting activated skills.');
+});
+$('#DBsection11').mouseover(function(){
+	$('#sect-desc').text('A list of all combinations.');
+});
+$('#DBsection12').mouseover(function(){
+	$('#sect-desc').html('Road Information including monster points and store items.');
+});
+$('#DBsection13').mouseover(function(){
+	$('#sect-desc').text('Calculators for Ice Age, Festival Points, Gunlance Shots, Reload & Recoil, HBG Beams, Attack Ceiling and Flash Conversion');
+});
+$('#DBsection18').mouseover(function(){
+	$('#sect-desc').text('Hunting Horn songs.');
+});
+$('#DBsection15').mouseover(function(){
+	$('#sect-desc').text('Partner Skill cost and requirement calculator.');
+});
+$('#DBsection19').mouseover(function(){
+	$('#sect-desc').text('Partnyaa Decos index.');
+});
+$('#DBsection16').mouseover(function(){
+	$('#sect-desc').text('Tower Decorations and Sigils information.');
+});
+$('#DBsection17').mouseover(function(){
+	$('#sect-desc').text('Parse an MHSX2G paste into english names.');
+});
+$('#DBsection20').mouseover(function(){
+	$('#sect-desc').text('Calculate expected Raviente Points and Gems.');
+});
+$('#DBsection21').mouseover(function(){
+	$('#sect-desc').text('Historical information for the Fist UL Patch.');
+});
+$('#HidenCalc').mouseover(function(){
+	$('#sect-desc').text('Go to the Hiden Calculator.');
+	$('#sect-desc').css('opacity','100');
+});
+$('#DamageCalc').mouseover(function(){
+	$('#sect-desc').text('Go to the Damage Calculator.');
+	$('#sect-desc').css('opacity','100');
+});
+
+
+$('.sectionIcon,.fakesectionIcon').mouseover(function(){
+	$('#sect-desc').css('opacity','100')
+	$('.sectionFooter').css('opacity','0')
+});
+$('.sectionIcon,.fakesectionIcon').mouseout(function(){
+	$('#sect-desc').html('&nbsp;');
+	$('#sect-desc').css('opacity','0');
+	$('.sectionFooter').css('opacity','100')
+});
+</script>
+
+
+</body>
+
+<!-- Mirrored from palm.fist.moe/database/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Jul 2022 21:26:58 GMT -->
+</html>

@@ -1,0 +1,597 @@
+﻿<!--<div class="backersmall">Taiwan Status</div>
+<p class="lessmargin">It has been confirmed that the Taiwanese servers won't see any of the post-ZZ content. The reason should be fairly obvious in that they are killing the game off in December and localisation would not be worth the effort.</p>
+<p style="margin-bottom:0px;">In summary this means that <b>the TW servers will never get</b>:<br/>
+<ul style="max-width:300px;margin:0px auto 0px auto;text-align:left;list-style-type: square;margin-bottom:5px;">
+<li>Carnival Games</li>
+<li>Zenith Anorupatisu</li>
+<li>Bogabadorumu (or its Musou)</li>
+<li>Zenith Baruragaru</li>
+<li>Zenith Gravios</li>
+<li>Zenith Harudomerugu</li>
+<li>Zenith Taikun Zamuza</li>
+<li>Musou Zerureusu</li>
+<li>The Magnet Spike weapon class</li>
+<li>A truly silly amount of power creep</li>
+<li>Unneeded nerfs to early Zeniths</li>
+</ul>
+<p>Thankfully, these are some of the least impactful losses possible, with a majority of the monsters being mediocre at best and the overall game balance being far worse.</p>-->
+<style>
+pre.code {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+        border-left-width: 1px;
+        border-left-style: solid;
+        border-left-color: rgb(221, 221, 221);
+    border-left: 3px solid #553333;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.0;
+    max-width: 100%;
+    overflow: auto;
+    padding: 0.5em 1.0em;
+    display: block;
+    word-wrap: break-word;
+    text-align: left;
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-top: 0px;
+	}
+	</style>
+<div class="backer_tall" style="margin-top:5px;" id="FUTUREh">Playing on JP</div>
+<div class="backer">JP Sign Up</div>
+<div class="backersmall">COG Account</div>
+<p>This process is pretty straight forward, visit <a href="https://www.capcom-onlinegames.jp/pc/regist">this link</a> and follow the images below.<br/>
+Enter your Email and the Captcha code.<br/>
+<img src="imgZZ/JPstep1.png" alt="" style="max-width:80%;"><br/>
+Get your Verification Code from the email and enter it.<br/>
+<img src="imgZZ/JPstep2.png" alt="" style="max-width:80%;"><br/>
+Enter your made up personal details and password.<br/>
+<img src="imgZZ/JPstep3.png" alt="" style="max-width:80%;"><br/>
+Agree to the Terms of Service.<br/>
+<img src="imgZZ/JPstep4.png" alt="" style="max-width:80%;"><br/>
+Write down your COG ID for logging into the game later.<br/>
+<img src="imgZZ/JPstep5.png" alt="" style="max-width:80%;"><br/>
+Your COG ID is your username equivalent, you will need to enter it in the Launcher to sign in and play.
+</p>
+
+<p>After all of the Sign Up process, visit <a href="http://www.capcom-onlinegames.jp/auth/auth?url=http%3a%2f%2fwww%2ecapcom-onlinegames%2ejp%2fpc%2fright%3fm%3d6%26service%3dmhf%26right%3dfree">this link</a>, agree to the terms and hit the orange button. This enables access to MHFZ JP proper.</p>
+
+
+<div class="backer">Basic Installation</div>
+<p>
+Read the Dual Client Install section instead if you want to keep playing on TW too, especially with the English Patch.</p>
+<p><a href="http://dl.mhf-g.jp/fullclient/mhfStartup.exe">Download the client here</a> and install it. It doesn't particularly matter what you choose in the install process but for best practice when you have two options select the one that talks about COG ID.
+</p>
+
+<div class="backer">Dual Client Set Up</div>
+<p><a href="http://dl.mhf-g.jp/fullclient/mhfStartup.exe">Download the JP client here</a>.</p>
+<p>The TW and JP installs clash with each other, you can have both installed but will need to manually swap versions. For the sake of this example the main install folder is <b>C:\Games\Capcom\Frontier</b></p>
+<ul style="width:90%;margin:10px auto 10px auto;">
+<li>1. Install TW to <b>C:\Games\Capcom\Frontier\</b></li>
+<li>2. Update the TW client and copy it to <b>C:\Games\Capcom\TW\</b></li>
+<li>3. Uninstall the TW client</li>
+<li>4. Install the JP client to <b>C:\Games\Capcom\Frontier\</b></li>
+<li>5. Update the JP client and copy it to <b>C:\Games\Capcom\JP\</b></li>
+<li>6. You should now have both TW and JP clients in their own folders</li>
+<li>7. Delete the <b>C:\Games\Capcom\Frontier\</b> folder (may need a reboot)</li>
+<li>8. Create a pair of bat files called <b>TW.bat</b> and <b>JP.bat</b> respectively with the content below:</li>
+</ul>
+
+<pre class="code" style="width:90%;"><b>TW.bat</b>
+rmdir "C:\Games\Capcom\Frontier"
+mklink /d "C:\Games\Capcom\Frontier" "C:\Games\Capcom\TW\"
+
+<b>JP.bat</b>
+rmdir "C:\Games\Capcom\Frontier"
+mklink /d "C:\Games\Capcom\Frontier" "C:\Games\Capcom\JP\"
+</pre>
+
+<p>Adjust the above directory names to match where you placed things. Running JP.bat will swap to the JP client and TW.bat will swap to the TW client. Premade bats for the exact folder structure used above <a href="bats.html">can be found here</a>.</p>
+
+<p>If you don't want to use the bat files and symbolic links you can just move and rename folders manually. This is less elegant as TW handles a font poorly and will require you to restart to swap clients without needing to manually move folder contents.</p>
+
+
+
+<div class="backer">VPN Options</div>
+<div class="backersmall">Mudfish VPN</div>
+<p class="lessmargin">A paid option that is designed specifically for only routing a game's traffic through a VPN without impacting the rest of your system. The minimum fee of $2.99 is more than enough to cover the rest of the game's lifespan.</p>
+<p class="lessmargin">Sign up on <a href="https://mudfish.net/">mudfish.net</a> and download the client <a href="http://mudfish.net/download">in the client section</a>.</p>
+<p class="lessmargin">After starting the application, go into <b>Item</b> followed by <b>Equip Items</b> and <b>Monster Hunter Forntier Z</b>.</p>
+<p class="lessmargin">In the following options, ensure you select <b>Asia (Japan)</b> and then any <b>JP Asia</b> node. You can experiment across the options but it will ultimately make little difference.</p>
+<p class="lessmargin">Just having the application running with the item added will handle everything related to MHF fine.</p>
+
+<div class="backersmall">VPN Gate</div>
+<p class="lessmargin">A free option that doesn't have the nice features of Mudfish VPN.</p>
+<p class="lessmargin">Download the <a href="http://www.vpngate.net/en/download.aspx">VPN Gate Installer</a> and install it.</p>
+<p class="lessmargin">After opening double click on the <b>VPN Gate Public VPN Relay Servers</b> option to get a list of servers.</p>
+<p class="lessmargin">Double click any server with a <b>Region</b> in <b>Japan</b>, checking the other stats to see how stable and fast it is for best choice.</p>
+<p class="lessmargin">Read the prompt and follow its general advice, you may need to connect a couple times or to different servers to find a solid choice.</p>
+<p class="lessmargin">This is all the set up required and you will be able to play MHF now.</p>
+
+
+<div class="backersmall">Client Updating</div>
+<p>It's important to realise that the client install is not up to date with latest files and will need to download some files, the best way to handle this is to <b>log in</b> to the point the CRC checks and download process starts and then simply <b>disconnect from your VPN</b>.</p>
+<p>After disconnecting the client will happily continue crc checking and updating as required but will not use your VPN for this traffic which will be massively faster. You will of course, need to sign in again after the process completes.</p>
+
+<div class="backer" id="FUTUREj">Starting the Game</div>
+<p>For the Japanese version you should simply use <a href="https://github.com/xupefei/Locale-Emulator/releases">Locale Emulator</a> with default settings which is perfectly set up for Japanese games by default.</p>
+<p>It's important to use Locale Emulator because not using the proper format can cause a number of issues including crashing and slowdown so don't try and avoid it when there's no advantages to doing so.</p>
+
+
+
+<div class="backer_tall" style="margin-top:5px;" id="FUTUREi">Gearing and Freebies</div>
+
+<div class="backer" id="FUTUREk">Basic Gearing</div>
+<p class="lessmargin">Up to GR1, you should follow the exact same flow as you would on TW from the <b>Basics and Beginners</b> section.</p>
+<p>JP has a couple of even easier gearing options than the Taiwanese server which makes doing the Hunter Guide stuff almost completely pointless. What you should do instead is an <b>Event Silver Rathalos Quest</b> which gives you the <b>Donru Armour</b>.</p>
+<p>The quest in question is named <b>《G★7イベント》 力卜レアのおすすめ</b> and is the first event quest in the first section.</p>
+<p>Completing the Silver Los quest rewards a minimum of 50x Mercury Books (水銀の書) a run which creates you a full set of Dounru GX (ドゥンルGX). Notably, all pieces of Dounru <b>start at GX level when crafted</b> which means upgrading these pieces can be seen as completely optional. 
+<p>A lazy option for some basic decorations is advisable to immediately hit up road with a carry (or to facetank the easier monsters), road has powerful Furious decorations with a progression requirement of one floor and a cost of 500 points which can easily boost your Dounru set:</p>
+
+<table class="centeredtable styledtable2 smalltext" style="max-width:100%;margin-bottom:5px;">
+<tbody><tr>
+<td colspan="2" style="background-color:#888;color:#000;text-align:center;text-shadow: 0px 1px 1px rgba(255,255,255,0.35);font-weight:bold;border:0px;font-size:100%;">500 RP Decos<br></td>
+</tr>
+<tr><td style="background-color:rgb(210,225,248);font-weight:bold;">Ｇ級・獅血珠</td><td style="background-color:rgb(230,230,250);" class="alignlefttd">Furious +2, Vampirism +3, Vigorous +2</td></tr>
+<tr><td style="background-color:rgb(210,225,248);font-weight:bold;">Ｇ級・獅雷珠</td><td style="background-color:rgb(230,230,250);" class="alignlefttd">Furious +2, Thunder Clad +2, Flash Conversion +2</td></tr>
+<tr><td style="background-color:rgb(210,225,248);font-weight:bold;">Ｇ級・獅撃珠</td><td style="background-color:rgb(230,230,250);" class="alignlefttd">Furious +2, Stylish Assault +2, Strong Attack +2</td></tr>
+<tr><td style="background-color:rgb(210,225,248);font-weight:bold;">Ｇ級・獅猛珠</td><td style="background-color:rgb(230,230,250);" class="alignlefttd">Furious +2, Rush +2, Drawing Arts +3</td></tr>
+<tr><td style="background-color:rgb(210,225,248);font-weight:bold;">Ｇ級・獅剣珠</td><td style="background-color:rgb(230,230,250);" class="alignlefttd">Furious +2, Sword God +2, Issen +2</td></tr>
+<tr><td style="background-color:rgb(210,225,248);font-weight:bold;">Ｇ級・獅射珠</td><td style="background-color:rgb(230,230,250);" class="alignlefttd">Furious +2, Steady Hand +2, Issen +2</td></tr>
+<tr>
+</tbody></table>
+<p>In terms of what you should actually insert, going with <b>Ｇ級・獅血珠 x5, Ｇ級・獅雷珠 x1 and Ｇ級・獅猛珠 x1</b> gets you a solid base set of skills and leaves you room for your free Hiden decorations.</p>
+
+
+<div class="backer" id="FUTUREk">Freebies</div>
+
+<div class="backersmall">Determination Decos</div>
+<p>Once a day you can roll a gacha for Raviente decorations, you have <b>50% chance of 1x Basic Raviente Decoration</b>, <b>45% chance of 2x Violent or Berserk Raviente Decorations</b> or <b>5% chance of 3x Extreme Raviente Decorations</b></p>
+<p>To roll these, talk to the Gacha Cat in the blacksmith and select <b>ノーマルくじ</b> and you simply need to use 4,000 HRP tickets (ギルドへの推薦状) which you get from doing quests or in huge quantities from the Hunter Guide.</p>
+<p>You will take 2 days with GOD RNG to get determination with this system.</p>
+
+<div class="backersmall">True Hiden Decos</div>
+<p>You can trade 50k Gzeny cheques (ポルタカード桜) on the Gacha Cat in the blackmith for True Hiden decorations. This is accessed in the <b>ボックスくじ</b> option followed by <b>イベントボックスくじ</b> and then <b>真秘伝ボックスくじ</b>.</p>
+<p>This Gacha is a Lucky Box style and as such if you simply keep rolling it you will eventually get every single variant of every single True Hiden decoration from simply getting cheques.</p>
+
+<div class="backersmall">Hiden Cuffs</div>
+<p>You can claim the materials to make up to four hiden cuffs by hitting G Rank requirements or owning certain equipment.</p>
+
+
+<table class="centeredtable styledtable2 smalltext" style="max-width:100%;margin-bottom:5px;">
+<tbody><tr>
+<td colspan="2" style="background-color:#888;color:#000;text-align:center;text-shadow: 0px 1px 1px rgba(255,255,255,0.35);font-weight:bold;border:0px;font-size:100%;">Hiden Cuff Rewards<br></td>
+</tr>
+<tr><td style="background-color:rgb(210,225,248);font-weight:bold;">Hit GR500</td><td style="background-color:rgb(230,230,250);" class="alignlefttd">Kill Dyuras or Gogomoas</td></tr>
+<tr><td style="background-color:rgb(210,225,248);font-weight:bold;">Own 試作型磁斬槌-α</td><td style="background-color:rgb(230,230,250);" class="alignlefttd">Bone Magnet Spike, unlock weapon type and buy 磁斬鎚試作用素材 on General Store</td></tr>
+<tr><td style="background-color:rgb(210,225,248);font-weight:bold;">Own 決意の剣斧【X】</td><td style="background-color:rgb(230,230,250);" class="alignlefttd" rowspan="2">Ketsui Series Swaxe and Tonfa, GR200 Hypnoc in Bamboo Forest with Beak Break </td></tr>
+<tr><td style="background-color:rgb(210,225,248);font-weight:bold;">Own 決意の棍【X】</td></tr>
+</tbody></table>
+<p>You create the Cuffs on the combiner and will need to turn in the Hiden Soul, Ribbon and Merit Stones on their dedicated quests on HR and GR NPCs.</p>
+<p>Depending on how you actually utilise the materials, you can get either <b>7x G or True Hiden cuffs</b> or <b>50x Standard Hiden Cuffs</b>.</p>
+<p>A good balance would realistically be making <b>6 G or Trues</b> and <b>8 Standard</b> to cover all weapon classes if desired.</p>
+
+<div class="backer" id="FUTUREa">ZZ Content</div>
+<div class="backersmall">Overview</div>
+<p>In brief this update adds a a new weapon class, new sigil types, a new mode for monsters and expands the G Rank ranking limit to GR999.</p> 
+<p>A <a href="https://pastebin.com/6Qy99Jyk">changelog can be found here</a> translated from the official site and sources. This release is functionally Z3 in terms of approach and how it's being released. No new exotics were added for ZZ.</p>
+
+<div class="backer" id="FUTUREb">Magnet Spikes</div>
+<div class="backersmall">Basics</div>
+<p>Magnet Spikes are a weapon with two modes that can be morphed between; these are respectively cutting and impact modes which deal the exact type of damage they are named for and use those hitboxes.</p>
+
+<div class="backersmall">Unlocking Magnet Spike</div>
+<p>There's a very short storyline involved with unlocking magnet spike, you will need to go on a number of <b>solo only</b> quests the culminate in unlocking magnet spikes and getting the materials for a Prototype MS for both yourself and your partner. These quests aren't terribly hard but as they are G Rank you will probably want at least the first GR set you get for free to finish them in a timely manner. A</p>
+<p>A brief guide to the unlocking process is below:</p>
+
+<ul style="max-width:700px;margin:auto;text-align:left;list-style-type: square;margin-bottom:5px;">
+<li>Talk to the smithy and blatantly ignore what he's saying.</li>
+<li>Head into the legendary bar and talk to the new NPC, Graham.</li>
+<li>Head out and to the entrance and talk to the cat you've ignored 800 times.</li>
+<li>Go back in and talk to Graham and do the G Rank Gougarfs in the top section.</li>
+<li>Go talk to Graham and then the combiner in the town square.</li>
+<li>Go and hunt the G Rank Rebidora in the same section as the Gougarfs.</li>
+<li>After the hunt head back and talk to Graham, the Smith, Graham again and then the Road NPC.</li>
+<li>Post the new G Rukodiora in the topmost section and murder it to death.</li>
+<li>Talk to Graham after returning and then the Smith.</li>
+<li>You've now unlocked Magnet Spikes and have the materials for a free Prototype.</li>
+</ul>
+
+<div class="backersmall">Magnet Spike Stats</div>
+<p>Magnet Spikes have absolutely no non-standard elements compared to standard weapons; <b>they do not have phials nor do they have length</b>. Their <b>attack multiplier</b> is <b>5.4</b>, meaning you divide by 5.4 and round up to get actual true raw.<br/>
+<img src="imgZZ/magspike_stats.png" alt=""><br/>
+Despite the name, Magnet Spikes are not in fact spikes. They are called Magnet Spikes because they are Magnets and in the game full of Spikes.
+</p>
+
+
+<div class="backersmall">Using Magnet Spikes</div>
+<p>As mentioned, magnet spikes have two modes. Cutting and impact. Both can be swapped to and unsheathed into at any time from idle and neither relies on a meter or gauge to be active. Attack wise, you can swap from any horizontal in one mode into a horizontal of the other.</p>
+<p>Cutting mode has fast attacks and evasions similar to those of Dual Swords while Impact is slower with heavy hitting single attacks and but still has quick swipes and a very fast charge.</p>
+<p>At any time in either mode you can also toggle aiming mode which allows you to shoot a Magnetic Marker on a monster, or to attract towards or repel away from an already placed marker.<br/>
+<br/>
+<img src="imgZZ/ms_aiming.png" alt="" class="bordered"><br/>
+If you attract of repel is based on the distance from the monster. Too close will only allow you to Repel (Blue), too far will not allow any action (White), while being the proper distance will allow you to Attract (Red). Attraction will chase a monster even if it moves as long as you follow a linear path towards it and can be cancelled into either an evade or a powerful falling attack.</p>
+
+<p>Both modes charge as you use them, when their icon turns red you can magnetise the weapon which buffs all attacks by 1.1x similar to a power phial and adds additional hits to select attacks for a duration of 80 seconds.<br/>
+<img src="imgZZ/ms_modes_cut.png" alt=""><br/><img src="imgZZ/ms_modes_impact.png" alt=""><br/>
+After the magnetism mode expires you will be locked out of gaining any progress towards it again for a short period of time. Both modes charge independently and can be left at red charge level indefinitely to be activated whenever you wish. 
+</p>
+<p>Both modes have a gauge which is used for things such as evasions, attracting and repelling from a monster and initiating the Magnetic Pin attack (covered below) which recharge over time and while attacking a monster.<br/>
+<img src="imgZZ/ms_gauge_grey.png" alt=""> <img src="imgZZ/ms_gauge_red.png" alt=""> <img src="imgZZ/ms_gauge_blue.png" alt=""><br/>
+As mentioned the gauge also indicates if you can use the Attract and Repel functions which launch you into the air to chase the magnetic marker you have placed on a monster. Every action which consumes gauge will simply consume a single bar.</p>
+<p>The magnetic pin is very similar in build up to a standard status effect, if you hit the monster with a sufficient amount of attacks it'll get a moving magnetism effect on the monster's body to indicate it is ready to be pinned. <br/>
+<img src="imgZZ/ms_pin_aura.png" alt="" class="bordered"><br/>
+Pinning can be done out of either Magnetic Double Slash or Double Swipe and causes you to leap into the air and slam down your Magnet Spike pinning the monster and initiating a QTE the keeps the monster in place until you either perform a pin or fail the QTE.<br/>
+<img src="imgZZ/ms_pin_start.png" alt="" class="bordered"><br/>
+The QTE will indicate what you have to mash directionally and button wise, mashing well enough will cause the monster icon's face to turn red and allow you to perform a Pin Finisher. This has an incredibly high motion value and will cause the monster to fall over while extending the period the monster is trapped for briefly due to the actual finisher having a lengthy animation.<br/>
+<img src="imgZZ/ms_pin_ready.png" alt="" class="bordered">
+<img src="imgZZ/ms_pin_finish.png" alt="" class="bordered"><br/>
+The finisher itself is very notable in that <b>it targets the spot you have your magnetic marker attached to</b>. This allows you to select the best hitbox or the most desirable parts to break on a monster. For tails this does in fact deal cutting damage but can only reduce a tail to 1HP, this allows any single cutting damage hit to immediately sever them.
+</p>
+
+<div class="backer" id="FUTUREg">Magnet Spike Moveset</div>
+<p>The flow chart below is the official one from capcom's official manual. It is mostly complete but is missing a few less obvious combos such as the <b>Magnetic Assault Leap</b> in cutting mode flowing into <b>Upslash</b> and then <b>Vertical 2</b> allowing for a <b>Finishing Slash</b> earlier than is overwise possible.<br/> 
+<img src="imgZZ/ms_weaponflow.png" alt=""></p>
+
+<table class="centeredtable styledtable2 smalltext" style="max-width:100%;margin-bottom:10px;">
+<tbody>
+<tr>
+<td colspan="2" style="background-color:#888;color:#000;text-align:center;text-shadow: 0px 1px 1px rgba(255,255,255,0.35);font-weight:bold;border:0px;font-size:100%;border-right:1px solid black;">Cutting Mode Motions</td>
+<td colspan="2" style="background-color:#888;color:#000;text-align:center;text-shadow: 0px 1px 1px rgba(255,255,255,0.35);font-weight:bold;border:0px;font-size:100%;border-left:1px solid black;">Impact Mode Motions</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Unsheathe Vertical</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">61
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Horizontal 1</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">44 (30)</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Vertical 1</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">43
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Horizontal 2</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">53 (30)</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Upslash</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">35
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Overhead Horizontal</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">100 (45)</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Vertical 2</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">46
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Down Swipe</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">46 (25)</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Horizontal 1</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">56
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Triple Strike 1</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">51 (10)</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Horizontal 2</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">46
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Triple Strike 2</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">58 (20)</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Horizontal 3</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">64
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Triple Strike 3</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">130 (50)</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Finishing Slash</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">120
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Charged Strike</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">338 (190)</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Finishing Slash (Magnetised)</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">120 ‧ 10x3
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Charged Strike (C.UP+1)</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">363 (190)</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Guard Counter</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">30
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Charged Strike (C.UP+2)</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">373 (190)</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Guard Counter (Success)</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">30 ‧ 80
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Supplex</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">96 ‧ 121 (50 ‧ 65)</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Magnetic Double Slash <span style="color:red;text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);">※</span></td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">44 ‧ 54
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Guard Assault <span style="color:red;text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);">※</span></td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">73 ‧ 90 (35 ‧ 45)</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Magnetic Evade into Upslash</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">55
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Magnetic Double Swipe <span style="color:red;text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);">※</span></td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">42 ‧ 52 (30 ‧ 35)</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Retreat Slash <span style="color:red;text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);">※</span></td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">20 ‧ 20
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Magnetic Shock (Whiff)</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">75 (30)</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Magnetic Assault (Leap) <span style="color:red;text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);">※</span></td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">80
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Magnetic Shock (Iframed)</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">125 ‧ 5x3 (60 ‧ 5x3)</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Falling Downslash <span style="color:red;text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);">※</span></td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">200
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Magnetic Assault (Leap) <span style="color:red;text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);">※</span></td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">40 ‧ 50 (35 ‧ 35)</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Magnetic Pin</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">1
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Falling Swings <span style="color:red;text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);">※</span></td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">25 ‧ 80 ‧ 120 (20 ‧ 35 ‧ 75)</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Magnetic Pin Finisher</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">600
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Magnetic Pin</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">1</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(66,66,81);font-weight:bold;min-width:110px;color:red;text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);" colspan="2"> ※ = Has Iframes</td>
+<td style="background-color:rgb(210, 225, 248);font-weight:bold;min-width:110px;">Magnetic Pin Finisher</td>
+<td style="background-color:rgb(230, 230, 250);" class="alignlefttd">600</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="backer" id="FUTUREc">Zenith Sigils</div>
+<div class="backersmall">About</div>
+<p>Zenith Sigils are a new type of sigil introduced in the ZZ update, they are usable with a base duration of between 15 and 25 seconds depending on sigil rather than always on passive effects like standard Sigils. There are functionally two types of these; Standard Zenith Sigils and AoE Zenith Sigils.</p>
+<p>Zenith Sigils can come from simply doing any rank of zenith, overall drop rate is not currently known but is at the lower end and likely syncs with the rare carve reward rate on each zenith tier (1%, 3%, 5%, 7%).</p>
+<div class="itempaneldiv" style="margin-bottom:5px;margin-top:-10px;"><div style="float:left;margin-top:-3px;"><img src="img3/itemico/questgray.png" style="margin:0px;" alt=""></div>脅異の印章<br>Zenith Sigil Material</div>
+
+<p>Both types of Zenith Sigil work in the same way: a new item icon in the shape of a sigil will appear on your item bar which can be used at any time - as long you are not actively performing an action - by simply hitting the use button. Using a Zenith Sigil causes you to do the Smoke Bomb animation activating the buffs on the sigil.<br/>
+
+<img src="imgZZ/zenith_sigil.png" alt="" class="bordered">
+</p>
+
+<div class="backersmall">Standard Sigils</div>
+<p>Activating a Standard Sigils will apply a number of buffs to you, these have a fixed duration and recharge time that is based on the values rolled on the sigil itself. For duration this is a base of 15 seconds with the duration value of the sigil being added to this (e.g. +4 duration would be 19 seconds) while the recharge time is a base of 2 minutes (or 120 seconds) with the value of the sigil removed (e.g. +14 to recharge is 1:46 or 106 seconds.)<br/>
+
+
+
+
+<img src="imgZZ/sigil_z1.png" alt="">
+</p>
+<p>The buffs of the sigils themselves do not map directly to the values and are far stronger than low rolls make them seem (e.g. +15 Attack is actually +330 attack) and with good management a decent roll will end up easily as good as a top end roll on a normal sigil.</p>
+
+<div class="backersmall">Area of Effect Sigils</div>
+<p>Activating an Area of Effect sigil will create a dome on the ground around where you activated it, this has a set duration of around 25 seconds and a recharge duration of 2 minutes.</p>
+<p>Area of Effect sigils can buff Attack, Elemental, Status, All Resistance, Affinity and Stun output as well as providing passive healing. You can roll multiple types of these buffs on a single sigil which will cause the dome to alternate between the colours indicating which buffs are active.<br/>
+<img src="imgZZ/sigil_dome.png" alt="" class="bordered"></p></p>
+<p>Like Standard Sigils the values on these sigils do not in fact directly relate to how much you will be buffed. A sigil with <b>+1 elemental and +14 to Resistances</b> will in fact increase Elemental by 100 and All Resistances 28. Higher rolls obviously grant much higher returns.<br/>
+<img src="imgZZ/sigil_z2.png" alt=""></p>
+
+
+<div class="backer_tall" id="FUTUREd">GR999 &amp; Unlimited Mode</div>
+<div class="backer">GR999</div>
+<p><b>GR999</b> is exactly what it sounds like. They increased the maximum rank to GR999 which is unlocked with a total of <b>13,716,950 GRP</b>, this is a total of <b>2,331,451 GRP</b> needed if you are GR899 already. While this is a fairly large amount you can stack a huge number of buffs to multiply gain and GRP quests including a Gogomoa for 8,000 GRP ship with ZZ.</p>
+<p>Buff wise you can stack <b>Diva Song</b>, <b>Log In Boost</b>, <b>Hardcore Mode</b> and whatever <b>Premium Courses</b> you want to make this take an incredibly trivial amount of time.</p>
+<p>Hitting GR999 adds box pages, SR food to the standard Food NPC and old Event Armours to the Warehouse Manager NPC inside the blacksmith. These sets are probably of minimal use unless you have rushed to GR999 on premium without assembling a real set.</p>
+<p><b>UL Mode</b> is primarily a source of the new per weapon type <b>Weapon Up Sigils</b>, these grant attack, elemental and affinity to their roll value as well as any standard rolls be Sigils get. Actual rates on the items needed for this are fairly low but can be increased by using the daily target board and hunting the monster that gives better rates that day (★1-2, ★3-4, ★5-7 bands).</p>
+
+
+<div class="backer">Armour Store</div>
+
+<table class="styledtable3 centeredtable">
+<tbody><tr><td style="background-color:rgb(160,160,255);font-weight:900;width:25%;" colspan="3">GR999 Armour Store</td>
+</tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">ホープGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">希望GX</td><td style="font-size:12px;margin:1px;padding:1px;">Beginner G Set</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">ルクストGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">光輝使者GX</td><td style="font-size:12px;margin:1px;padding:1px;">White Nun</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">オレウムGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">暗黑侵蝕GX</td><td style="font-size:12px;margin:1px;padding:1px;">Black Nun</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">クラントGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">死亡咆哮GX</td><td style="font-size:12px;margin:1px;padding:1px;">Purple Nun</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">ユプケGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">尤普肯GX</td><td style="font-size:12px;margin:1px;padding:1px;">Gray and Green Samurai</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">若紅葉GX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">若紅葉GX</td><td style="font-size:12px;margin:1px;padding:1px;">Green Demon Blademaster</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">翡戸隠GX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">翡戶隱GX</td><td style="font-size:12px;margin:1px;padding:1px;">Green Demon Gunner</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">コルーデGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">協力GX</td><td style="font-size:12px;margin:1px;padding:1px;">Butler / Maid Guildie</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">スフォルGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">威力GX</td><td style="font-size:12px;margin:1px;padding:1px;">2015 Event Armour</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">カイオルGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">匠心GX</td><td style="font-size:12px;margin:1px;padding:1px;">Red Silver Abomination</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">ユーリスGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">公義GX</td><td style="font-size:12px;margin:1px;padding:1px;">Green Purple Abomination</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">クオイズGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">松石GX</td><td style="font-size:12px;margin:1px;padding:1px;">White Indian Set</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">カライスGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">雲蓋石GX</td><td style="font-size:12px;margin:1px;padding:1px;">Pink Indian Set</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">崩霧GX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">崩霧GX</td><td style="font-size:12px;margin:1px;padding:1px;">Yellow Kimono (Blademaster)</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">迅霧GX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">迅霧GX</td><td style="font-size:12px;margin:1px;padding:1px;">Yellow Kimono (Gunner)</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">ルケーゼGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">光耀GX</td><td style="font-size:12px;margin:1px;padding:1px;">Pure White Indian</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">フロガダGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">遠久GX</td><td style="font-size:12px;margin:1px;padding:1px;">Purple G Starter Set</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">しましまGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">條紋GX</td><td style="font-size:12px;margin:1px;padding:1px;">2015 Swimsuit</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">リオデュオGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">雙炎龍GX</td><td style="font-size:12px;margin:1px;padding:1px;">Pink Azure Event Set</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">オトノGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">深秋GX</td><td style="font-size:12px;margin:1px;padding:1px;">Viking Event</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">ウルキーフェイクGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">貓頭猿偽裝GX</td><td style="font-size:12px;margin:1px;padding:1px;">Eruki Robot Helm</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">シルックGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">銀茶髦GX</td><td style="font-size:12px;margin:1px;padding:1px;">Black Burukku</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">ロホックGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">赤茶髦GX</td><td style="font-size:12px;margin:1px;padding:1px;">Red Burukku</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">キュールGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">沁涼GX</td><td style="font-size:12px;margin:1px;padding:1px;">2016 Swimsuit</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">ブリゼGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">-</td><td style="font-size:12px;margin:1px;padding:1px;">Unreleased Purple Set</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">ラーヴェGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">熔岩GX</td><td style="font-size:12px;margin:1px;padding:1px;">Rave Event</td></tr>
+<tr><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">ドゥンルGX</td><td style="background-color:rgb(240,190,170);font-weight:900;font-size:12px;margin:1px;padding:1px;">沉夜GX</td><td style="font-size:12px;margin:1px;padding:1px;">Dounru</td></tr>
+
+</tbody></table>
+
+<div class="backer">Unlimited Mode</div>
+<div class="backersmall">Basics</div>
+<p>Hitting GR999 unlocks <b>Unlimited Mode</b> this is a per quest toggle that you can set on a number of monsters that works pretty much identically to Hardcore. This option adjusts the monster's Attack, Health and similar values to around that of three or four star Zenith. Monsters that have a hardcore variant will use their hardcore moveset but monsters such as Pokaradon which never saw a Hardcore variant will use their base moveset.</p>
+<p>Quests which can be toggled to Unlimited Mode are indicated by a <b>Blue Flame Icon</b> and span all standard G star ratings. There are currently no Burst, Origin or Exotic monsters for UL mode.<br/>
+<img src="imgZZ/ul_quest.png" alt="" class="bordered">
+</p>
+
+<table class="centeredtable grankskillstable" style="max-width:80%;min-width:80%;">
+	<tr><td colspan="2" style="background-color:rgb(0,0,0);color:white;">UL Monster Breakdown</td>
+</tr>
+
+
+<tr><td style="background-color:rgb(145,145,145);color:white;">★1</td>
+<td class="ml-row gou" style="width:90%;">Pokaradon, Yian Kut-Ku, Bulldrome, Breeding Season Hypnoc</td></tr>
+
+<tr><td style="background-color:rgb(145,145,145);color:white;">★2</td>
+<td class="ml-row gou">Farunokku, Blue Yian-Kut Ku, Gypceros, Cephadrome, Congalala</td></tr>
+
+<tr><td style="background-color:rgb(90,200,120);color:white;">★3</td>
+<td class="ml-row gou">Purple Gypceros, Gogomoa, Shogun Ceantaur, Basarios</td></tr>
+
+<tr><td style="background-color:rgb(90,200,120);color:white;">★4</td>
+<td class="ml-row gou">Green Plesioth, Black Diablos, Red Khezu, Pink Rathian</td></tr>
+
+<tr><td style="background-color:rgb(130,160,230);color:white;">★5</td>
+<td class="ml-row gou">Abiorugu, Berukyurosu, Azure Rathalos, Gougarfs</td></tr>
+
+<tr><td style="background-color:rgb(130,160,230);color:white;">★6</td>
+<td class="ml-row gou">Volganos, Red Volganos, Kuarusepusu, Black Gravios</td></tr>
+
+<tr><td style="background-color:rgb(130,160,230);color:white;">★7</td>
+<td class="ml-row gou">Rebidiora, Akura Jebia, Akantor, Yian Garuga, Espinas, Gurenzeburu, Dyuragaua, Forokururu, Poborubarumu</td></tr>
+
+</table>
+
+
+<p>With a proper ZX set you can expect any of the harder monsters available to be fully capable of one shotting you with some attacks from 150 health and with most attacks if you are trying to use Adrenaline.</p>
+
+<div class="backersmall">UL Rewards</div>
+<p>The main purpose of <b>Unlimited Mode (UL)</b> is to give access to the powerful new per <b>Weapon Type Up Sigils</b> such as Dual Swords Up (雙劍強化). This sigil skill explicitly gives the stated value to Attack, Affinity and Elemental at the same time, this means that if you rolled a <b>Dual Swords Up +10</b> sigil you would get <b>10 True Raw, 10% Affinity and 100 Elemental</b>. As these sigils can roll two other values at the normal range of up to +15 this means you can get single sigils with <b>up to 75 effective points on them</b> making them very desirable for anyone not utilising all Slots in a weapon for decorations.<br/>
+<img src="imgZZ/sigil_ul.png" alt=""><br/>
+The materials for these sigils drops at a fairly low rate, but there are three featured monsters each day that grant boosted rates at the items. The items are also <b>unique per weapon</b> so it is a fairly long stretch goal justifying the hunting of a lot of UL monsters to get well rolled UL Sigils.
+<div class="itempaneldiv" style="margin-bottom:5px;margin-top:-5px;"><div style="float:left;margin-top:-3px;"><img src="img3/itemico/questyellow.png" style="margin:0px;" alt=""></div>秘刻印・×××<br>UL Sigil Material</div>
+</p>
+<p>Other than the Sigil materials, UL Mode monsters also give <b>doubled Transmog Lotto points</b> and <b>Hiden Souls, Ribbons and Merits</b>. This makes them an excellent source to grind out Hiden Materials allowing you to focus only on content that might actually be able to hurt you instead of early HR and GR level content.</p>
+
+<div class="backer" id="FUTUREe">New Monsters</div>
+<div class="backersmall">Bogabadorumu</div>
+<p style="margin:0px;"><img src="img/mons/zenithbogabadorumu.png" alt=""></p>
+<p>A monster with blast that comes with the new skill Furious and the new Zenith Skill Rush Up. Cuffs for both of these require skills his mats rather than any standard G monster's.</p>
+<p>Boggy's weapons come with <b>Blast Element</b> which post rework still does not appear to be very good. The weapons do however have Rush Up which is free infinite stamina and +70 true on top of the usual Rush buffs making them good Raw choices.</p>
+<p>Boggy has Ultra Quake and Roar, Blast and can stun you into an on your knees stance even with stun immunity. His Zenith Parts are his forelegs which are unique amongst zeniths in that they will only become Zenith parts midway through the fight. Both forelegs must be broken for the break. Bogabadorumu's Tail can be cut and his Head and Back can be broken.</p>
+
+<div class="backersmall">Zenith Gravios</div>
+<p style="margin:0px;"><img src="img/mons/zenithgravios.png" alt=""></p>
+<p><b>Zenith Gravios</b> comes with the new skill <b>Trained</b> which is a Hybrid Skill containing Focus, Martial Arts and granting what amounts to the effects of Caring+3. Its <b>Zenith Part</b> is his <b>Chest</b> with his other breakables being his head and a severable tail. Zenith Gravios can inflict Extreme Fireblight and has Ultra Roar and Ultra Quake.</p>
+<p>His weapons are Fire and Blast with varying Zenith Skills depending on weapon class, they are not terribly good and only fill the not quite a niche of better blast value weapons for the weapon classes.</p>
+<p>Armour wise his equipment is strictly mediocre with points in trained but requiring more pieces than is reasonable to be equipped to enable it at +2 levels.</p>
+
+<div class="backersmall">Zenith Baruragaru</div>
+<p style="margin:0px;"><img src="img/mons/zenithbaruragaru.png" alt=""></p>
+<p><b>Zenith Baruragaru</b> is capable of pinning, inflicting sharpness loss, inflicting defense down, causing extreme water blight and has an Extreme level Roar. His <b>Zenith Part</b> is his <b>Head</b> extending to his <b>Tongue</b></p>
+<p>Armour wise his gear is mostly mediocre with stand outs in the Blademaser Chest (+10 Charge Attack Up, +6 Trained) and Gunner Helmet (+10 Mounting).</p>
+
+
+<div class="backer" id="FUTUREf">New &amp; Changed Skills</div>
+<div class="backersmall">New Skills</div>
+<p style="margin-bottom:0px;"><b>[手練] / Training :</b> 10 or 15 points. Grants Focus, Martial arts at levels equal to the skill level and stops you from launching players with attacks.</p>
+<p style="margin-bottom:0px;"><b>[獅子奮迅] / Furious:</b> 10 points. Increases Attack, Affinity, Elemental and Status as you perform actions such as evasions, attacks and perfect guards. Requires both Evades and Attacking to advance in stages and resets upon taking damage. At the maximum level of 3 this grants <b>Attack +180, Elemental 1.20x, Status 1.20x, Affinity +40%</b>. Literally Lion's Speed or Furious Efforts if you prefer that.</p>
+<p style="margin-bottom:10px;"><b>[磁斬鎚技【磁星】] / Magnet Spike Tech [Magnetic Star] :</b> 30 Points. Attack Up, ESP, Ultra Earplugs. Successful evasive motions boost attack and gauge recovery. Movement speed up. Magnetic target marker doesn't disappear.</p>
+ 
+
+<div class="backersmall">Changed Skills</div>
+<p style="margin-bottom:0px;"><b>[剛撃+6] / Strong Attack +6 :</b> 50 Points. 200 true raw.</p>
+<p style="margin-bottom:0px;"><b>[剣神+3] / Sword God+3 :</b> 25 Points. Includes Sharpening Artisan.</p>
+<p style="margin-bottom:0px;"><b>[剛弾+2] / Steady Hand+2 :</b> 20 points. Adds the effect of Precision+2 or Critical Shot's +5 hitbox bonus. Works on both Bowguns and Bows.</p>
+
+<p style="margin-bottom:0px;"><b>[穏射+3] / Gentle Shot +3 :</b> 20 points required, down from 30.</p>
+<p style="margin-bottom:0px;"><b>[装着+3] / Mounting+3 :</b> 20 points required, down from 30.</p>
+<p style="margin-bottom:0px;"><b>[装着+2] / Mounting+2 :</b> 15 points required, down from 20.</p>
+<p style="margin-bottom:0px;"><b>[反動軽減+3] / Recoil+3 :</b> Lowered to 20 points total.</p>
+ 
+<p style="margin-bottom:0px;"><b>[弱点特効] / Exploit Weakness :</b> Requirements for the raw hitbox buff lowered to 30 from 35.</p>
+<p style="margin-bottom:0px;"><b>[オートガード] / Auto-Guard :</b> No longer activates Reflect, Obscurity or Rush. Does not fill lance guard gauge.</p>
+
+
+<div class="backer" id="FUTUREz">Other Things</div>
+<div class="backersmall">PZ Cuffs</div>
+<p>The ZZ upgrade adds PZ cuffs, these are basically purely upgraded versions of the SZ cuffs that come with a single Zenith Skill by having them come with a Zenith Skill and up to 5 points in a meta skill.</p>
+<p>Unlike previous Premium Cuffs these are solely locked to a <b>Lucky Box Style Gacha</b>, this costs 30 coins up front and rolls for 10 cuffs. You cannot roll duplicates as each cuff is removed as you roll. This functionally means you can guarantee every cuff by investing 150 coins (which will run you around US$90). There are a decent number of useful cuffs but there are still more mediocre and brick rolls than good, meaning you could easily have to throw 90 coins before you see one you'd actively desire.<br/>
+
+<img src="imgZZ/zz_cuffs.png" alt="" class="notbordered">
+</p>
+<p>Since ZZ's release they have launched <b>five series</b> of PZ cuffs. All of them have great rolls as well as brick rolls. Using a PZ cuff is always the best choice and using anything else is limiting in comparison (especially with Hiden Cuffs launching during this update cycle).</p>
+
+<div class="backersmall">New Tower Weapons</div>
+<p>New tower weapons were added a couple weeks into the ZZ update, just before the release of <b>Zenith Gravios</b>, they are absurdly strong and have incredibly high potential Raw, Element and Status values.</p>
+<p>While these weapons purely have <b>Tower Sigil Slots</b> - stopping the use of decorations - they have bloated enough stats to outclass any weapon that isn't a Raviente or Road Weapon and are best in slot outside of a handful of Raviente Weapons even for the hardest content in the game.</p>
+<p>One weapon can be crafted a week and the weapons are upgraded using nothing more than standard tower gems from the Road Store along with a small number of Zenith Materials.<br/>
+<img src="imgZZ/zz_tower.png" alt="" class="notbordered">
+</p>
+<p>Do these weapons completely remove any real reason to grind normal weapons? Yes. All new Zenith monsters have released with bricked weapons since this series came out.</p>
+<p>As their single downside, Tower weapons <b>do not have the Zenith Partbreaker effect</b>.</p>
+
+
+
+<div class="backer" id="FUTUREzamuza">ZZ Update 1</div>
+<div class="backersmall">New Monsters</div>
+<p>The first content update for the ZZ cycle introduces <b>Zenith Taikun Zamuza, Zenith Harudomerugu, Musou Zerureusu</b> and <b>a large amount of power creep and poorly thought out nerfs</b>.</p>
+<p>All weapons added from the new Zeniths are useless day 0 because of Blue Tower Weapons existing. The armour pieces are good.</p>
+
+<div class="backersmall">New Zenith Skill</div>
+<p><b>Ceaseless Up</b> relaxes hit requirements, makes the skill's buff stages go down one at a time instead of resetting to zero and adds a third stage with more Affinity and Crit Multiplier.</p>
+
+<div class="backersmall">New Hiden Cuffs</div>
+<p>There are new cuffs that grant hiden points and stop your Hiden using a skill slot. These are separated from normal skill cuffs and do not take up any actual slots in an outfit. You can equip a single hiden cuff alongside any other cuff. Hiden Cuffs have three levels of power: Basic, G and True.</p>
+<p class="lessmargin"><b>Basic Cuffs</b> provide +6 points in a Hiden and stop Hiden using a skill slot.</p>
+<p class="lessmargin"><b>G Cuffs</b> provide +12 points in a Hiden and stop Hiden using a skill slot.</p>
+<p><b>True Cuffs</b> provide +12 points in a Hiden, +2 points in a Meta Skill and stop Hiden using a skill slot.</p>
+<p>The first two levels of these cuffs use standard Hiden materials, you cannot exchange HL Hiden tickets to get them. The true cuff requires you to use a single True Hiden decoration, there are 8 versions of these cuffs for each weapon type and any True Hiden decoration can be used to make any of the cuffs.<br/>
+<img src="imgZZ/HidenCuff.png" alt=""><br/>
+It cannot be understated how enabling these are for building sets and how much power creep they bring to the game.</p>
+
+<div class="backersmall">New Road &amp; Tower Weapons</div>
+<p><b>GS and Hammer</b> get Very Long versions of the broken Blue Tower series, <b>Lance</b> gets a <b>Long</b> version which is more usable than the very long variant.</p>
+<p><b>Crimson Demon Road weapons</b> are added and one is available weekly from the Road Store. They are globally pretty bad and worse than the existing <b>Burning Zero Series</b> and the <b>Festival Chroma Series</b>.</p>
+
+<div class="backersmall">Zenith Nerfs</div>
+<p>For reasons unfathomable to anyone with sense, this content update <b>nerfs all GR200 to GR400 Zeniths</b>, these are pretty significant nerfs that drastically affect the difficulty for entry level Zeniths.</p>
+<p><b>GR200 monsters</b> are standardised to around <b>86% of their original health</b> and <b>80% or less of their attack</b>.</p>
+<p><b>GR400 monsters</b> are standardised to around <b>80% of their original health</b> and <b>90% or less of their attack</b>.</p>
+<p>For <b>both GR200 and GR400</b> the weaker outliers such as Tigrex were only nerfed to around 93% of their Health (but took the same hit to Attack as the others).</p>
+<p>The nerfs are pretty poorly thought out and mean that <b>some of the standard G Rank variants of monsters now have more HP and Attack than the 'Zenith' versions</b> and that we have dumb situations like <b>GR100 Shagaru Magala having more HP than every GR200 Zenith except Taikun</b>. On the plus side, it does allow you to more easily ignore the 10 years of non-zenith content and complain you have nothing to do much faster.</p>
+
+<div class="backersmall">Other Changes</div>
+<p class="lessmargin"><b>UL Mode</b> has <b>Zenaserisu, White Hypnoc, White Espinas, Silver Rathalos and Gold Rathian</b> added to the roster.</p>
+<p class="lessmargin"><b>Legendary Rastas</b> completely ignore all Zenith Blights as well as Ultra Roars, Wind and Quake.</p>
+<p class="lessmargin"><b>New Options</b> to rebind interact with NPC and to allow you to always run in town</p>
+<p class="lessmargin"><b>Hunter's Road</b> has new equipment and lets you earn medals easier including with a new skill to get extras</p>
+<p class="lessmargin"><b>Diva Defense</b> has new weapons including a Magnet Spike.</p>
+<p class="lessmargin"><b>Weekend Carnival</b> has new transmog masks.</p>
+<p><b>MHF as a whole</b> is being killed off completely.</p>
+
+
